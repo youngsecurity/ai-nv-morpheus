@@ -15,13 +15,22 @@
 
 version: "3"
 
+#x-with-gpus: &with_gpus
+# deploy:
+#    resources:
+#      reservations:
+#        devices:
+#          - capabilities:
+#            - gpu
+
 x-with-gpus: &with_gpus
-  deploy:
+ deploy:
     resources:
       reservations:
         devices:
-          - capabilities:
-            - gpu
+          - driver: "nvidia"
+            device_ids: ["0"]
+            capabilities: [gpu]
 
 services:
   triton:
