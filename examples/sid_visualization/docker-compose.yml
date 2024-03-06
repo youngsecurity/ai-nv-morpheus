@@ -15,6 +15,7 @@
 
 version: "3"
 
+# Default configuration using all available system GPUs
 #x-with-gpus: &with_gpus
 # deploy:
 #    resources:
@@ -23,6 +24,7 @@ version: "3"
 #          - capabilities:
 #            - gpu
 
+# Custom configuration to select a specific NVIDIA GPU device_ids
 x-with-gpus: &with_gpus
  deploy:
     resources:
