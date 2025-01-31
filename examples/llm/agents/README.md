@@ -97,7 +97,7 @@ Install the required dependencies.
 ```bash
 mamba env update \
   -n ${CONDA_DEFAULT_ENV} \
-  --file ./morpheus/conda/environments/examples_cuda-121_arch-x86_64.yaml
+  --file ./conda/environments/examples_cuda-121_arch-x86_64.yaml
 ```
 
 
@@ -118,7 +118,7 @@ This example demonstrates the basic implementation of Morpheus pipeline, showcas
 
 
 ```bash
-python exmaples/llm/main.py agents simple [OPTIONS]
+python examples/llm/main.py agents simple [OPTIONS]
 ```
 
 ### Options:
@@ -170,7 +170,7 @@ kafka-topics.sh --bootstrap-server ${BOOTSTRAP_SERVER} --alter --topic input --p
 Now Kafka example can be run using the following command with the below listed options:
 
 ```bash
-python exmaples/llm/main.py agents kafka [OPTIONS]
+python examples/llm/main.py agents kafka [OPTIONS]
 ```
 
 ### Options:
